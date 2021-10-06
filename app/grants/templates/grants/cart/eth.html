@@ -83,7 +83,7 @@
                     <div class="d-flex">
                       <input v-model="grant.grant_donation_amount" class="col-auto form-control" type="number" min="0" step="any" placeholder="Amount" style="max-width: 7rem"/>
                       <span class="my-auto mx-3">[[ ethSelectedToken ]]</span>
-                      <span class="text-danger my-auto" v-if="grant.grant_donation_amount_usd < UsdMinimalContribution">Minimum [[ grant.grant_donation_amount/grant.grant_donation_amount_usd || '' | formatNumberWithDecimal]] [[grant.grant_donation_currency]] required</span>
+                      <span class="font-smaller-3 text-danger my-auto" v-if="grant.grant_donation_amount_usd < UsdMinimalContribution">Minimum [[ grant.grant_donation_amount/grant.grant_donation_amount_usd || '' | formatNumberWithDecimal]] [[grant.grant_donation_currency]] required</span>
                     </div>
 
                     <small v-if="index === 0" class="col-12 text-left text-primary cursor-pointer pl-0 mt-1" @click="applyAmountToAllGrants(grant)">
