@@ -1237,6 +1237,7 @@ def render_start_work_new_applicant(interest, bounty):
 		'email_type': 'bounty',
         'utm_tracking': build_utm_tracking('start_work_new_applicant'),
         'approve_worker_url': bounty.approve_worker_url(interest.profile.handle),
+        'reject_worker_url': bounty.reject_worker_url(interest.profile.handle),
     }
 
     subject = "A new request to work on your bounty"
